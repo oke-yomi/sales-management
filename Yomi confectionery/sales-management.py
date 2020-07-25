@@ -15,7 +15,7 @@ class YomiConfectionery:
     # a function that updates new food items to the menu
     def UpdateMenu(self, name, price, quantity):
         self.foods[name] = [price, quantity]
-        return menu
+        return self.foods
 
     # a function to give us the list of items in the menu dictionary
     def AvailableFoods(self):
@@ -111,3 +111,7 @@ if __name__ == '__main__':
 # adding new foods to the database
     # add new foods
     # yomi.addNewFood('rice',50, 300)
+
+
+Food = YomiConfectionery(menu)
+Food.AvailableFoods()
